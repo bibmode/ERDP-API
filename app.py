@@ -8,8 +8,10 @@ from typing import List
 from rdp import rdp
 from scipy.spatial.distance import directed_hausdorff
 from scipy.stats import ttest_ind
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 executor = ThreadPoolExecutor(4)
 
